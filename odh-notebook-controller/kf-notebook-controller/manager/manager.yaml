@@ -16,6 +16,7 @@ spec:
       labels:
         app: notebook-controller
         kustomize.component: notebook-controller
+        sidecar.istio.io/inject: "true"
     spec:
       containers:
       - name: manager
