@@ -11,11 +11,9 @@ spec:
     metadata:
       labels:
         deployment: odh-dashboard
+      annotations:
+        sidecar.istio.io/inject: "true"
     spec:
-      template:
-        metadata:
-          annotations:
-            sidecar.istio.io/inject: "true"
       affinity:
         podAntiAffinity:
           preferredDuringSchedulingIgnoredDuringExecution:
