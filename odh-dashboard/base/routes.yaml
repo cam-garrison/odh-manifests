@@ -1,8 +1,7 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  annotations:
-    name: odh-dashboard
+  name: odh-dashboard
 spec:
   port:
     targetPort: 8080
