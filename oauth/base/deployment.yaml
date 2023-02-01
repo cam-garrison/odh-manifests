@@ -15,7 +15,7 @@ spec:
       serviceAccountName: proxy
       containers:
       - name: oauth-proxy
-        image: openshift/oauth-proxy:latest
+        image: quay.io/openshift/origin-oauth-proxy:latest
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8443
