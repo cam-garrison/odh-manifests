@@ -1,0 +1,18 @@
+apiVersion: networking.istio.io/v1beta1
+kind: Gateway
+metadata:
+  name: proxy-gateway
+  namespace: opendatahub
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+  - hosts:
+    - proxy.opendatahub.svc.cluster.local
+    port:
+      name: https-oauth-cluster-example-com
+      number: 443
+      protocol: HTTPS
+    tls:
+      credentialName: odh-dashboard-credential # must be the same as secret
+      mode: SIMPLE
