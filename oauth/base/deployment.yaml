@@ -20,13 +20,13 @@ spec:
         image: quay.io/openshift/origin-oauth-proxy:latest
         imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 8443
+        - containerPort: 8180
           name: public
         args:
-        - --https-address=:8443
+        - --http-address=:8180
         - --provider=openshift
         - --openshift-service-account=proxy
-        - --upstream=http://localhost:8080
+        - --upstream=static://200
         - --tls-cert=/etc/tls/private/tls.crt
         - --tls-key=/etc/tls/private/tls.key
         - --cookie-secret-file=/etc/oauth/config/cookie_secret

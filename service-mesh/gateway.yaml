@@ -15,4 +15,4 @@ spec:
      mode: SIMPLE
      credentialName: odh-dashboard-credential 
    hosts:
-   - '*'
+   - "*"

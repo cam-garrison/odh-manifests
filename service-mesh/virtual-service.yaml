@@ -6,7 +6,7 @@ spec:
  gateways:
  - odh-gateway
  hosts:
- - '*'               
+ - "*"  
  http:
  - match:
    - uri:
@@ -17,4 +17,4 @@ spec:
    - destination:
        host: odh-dashboard
        port:
-         number: 8180
+         number: 80

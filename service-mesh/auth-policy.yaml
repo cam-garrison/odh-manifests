@@ -10,8 +10,8 @@ spec:
   action: CUSTOM
   provider:
     name: oauth2-proxy
-  rules:
+  rules: 
     - to:
         - operation:
-            hosts: ["odh-dashboard.opendatahub.svc.cluster.local"] # todo: add more?
-            notPaths: ["/auth/*"]  # todo: see if this is necessary
+            # hosts: ["odh-dashboard.opendatahub.svc.cluster.local"] # todo: add more?
+            notPaths: ["/auth/*", "/metrics/*"]  # todo: see if this is necessary

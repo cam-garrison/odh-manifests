@@ -1,20 +1,16 @@
 apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
-  labels:
-    app.kubernetes.io/name: oauth2-proxy
   name: oauth2-proxy
   namespace: opendatahub
 spec:
   gateways:
-  - proxy-gateway
+  - odh-gateway
   hosts:
   - proxy.opendatahub.svc.cluster.local
   http:
   - route:
     - destination:
-        # This should line up with the Service that the
-        # oauth2-proxy Helm chart deployed.
         host: proxy
         port:
-          number: 443
+          number: 80
