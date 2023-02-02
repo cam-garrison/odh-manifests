@@ -1,16 +1,20 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  name: odh-dashboard
-  namespace: opendatahub
+ name: odh-dashboard
 spec:
-  gateways:
-  - odh-gateway
-  hosts:
-  -  "*"
-  http:
-  - route:
-    - destination:
-        host: odh-dashboard
-        port:
-          number: 8080  
+ gateways:
+ - odh-gateway
+ hosts:
+ - '*'               
+ http:
+ - match:
+   - uri:
+       exact: /odh-dashboard
+   rewrite:
+     uri: /  
+   route:           
+   - destination:
+       host: odh-dashboard
+       port:
+         number: 8180
