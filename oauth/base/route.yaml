@@ -3,8 +3,9 @@ kind: Route
 metadata:
   name: proxy
 spec:
+  port:
+    targetPort: 8180
   to:
     kind: Service
     name: proxy
-  tls:
-    termination: Reencrypt
+    weight: 100
