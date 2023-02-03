@@ -26,9 +26,9 @@ spec:
         - --http-address=:8180
         - --provider=openshift
         - --openshift-service-account=proxy
-        - --upstream=http://localhost:8080
-        - --tls-cert=/etc/tls/private/tls.crt
-        - --tls-key=/etc/tls/private/tls.key
+        - --upstream=http://localhost:5678
+        # - --tls-cert=/etc/tls/private/tls.crt
+        # - --tls-key=/etc/tls/private/tls.key
         - --cookie-secret-file=/etc/oauth/config/cookie_secret
         - --cookie-expire=23h0m0s
         - --cookie-secret=SECRET
@@ -39,13 +39,11 @@ spec:
         - mountPath: /etc/oauth/config
           name: oauth-config
       - name: http-https-echo
-        image: docker.io/mendhak/http-https-echo:26
+        image: docker.io/hashicorp/http-echo:alpine
         imagePullPolicy: IfNotPresent
         ports:
           - name: echo-port
-            containerPort: 8080
-        args:
-        - --p 8080:8080
+            containerPort: 5678
       volumes:
         - name: proxy-tls
           secret:
