@@ -7,10 +7,10 @@ spec:
   gateways:
   - odh-gateway
   hosts:
-  - proxy.opendatahub.svc.cluster.local
+  - route.io
   http:
   - route:
     - destination:
         host: proxy
         port:
-          number: 80
+          number: 8080

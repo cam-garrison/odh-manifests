@@ -9,10 +9,8 @@ spec:
  - "*"  
  http:
  - match:
-   - uri:
-       exact: /odh-dashboard
-   rewrite:
-     uri: /  
+  #  - uri:
+  #      prefix: /odh-dashboard
    route:           
    - destination:
        host: odh-dashboard
