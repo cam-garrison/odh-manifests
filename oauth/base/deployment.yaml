@@ -38,6 +38,14 @@ spec:
           name: proxy-tls
         - mountPath: /etc/oauth/config
           name: oauth-config
+      - name: http-https-echo
+        image: docker.io/mendhak/http-https-echo:26
+        imagePullPolicy: IfNotPresent
+        ports:
+          - name: echo-port
+            containerPort: 8080
+        args:
+        - --p 8080:8080
       volumes:
         - name: proxy-tls
           secret:
@@ -45,3 +53,4 @@ spec:
         - name: oauth-config
           secret:
             secretName: oauth-config-generated
+      
