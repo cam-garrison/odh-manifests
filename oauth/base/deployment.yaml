@@ -15,6 +15,7 @@ spec:
       labels:
         app: proxy
     spec:
+      serviceAccount: ext-auth
       containers:
       - name: oauth-proxy
         image: quay.io/openshift/origin-oauth-proxy:latest

@@ -4,6 +4,9 @@ namespace: ext-auth
 resources:
 - smm.yaml
 - oauth.secret.yaml
+- service-account.yaml
+- auth-delegator.clusterrolebinding.yaml
+- cluster-monitoring-role-binding.yaml
 - deployment.yaml
 - service.yaml
 images:
