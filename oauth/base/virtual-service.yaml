@@ -1,16 +1,16 @@
 apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
-  name: oauth2-proxy
+  name: ext-service
   namespace: ext-auth
 spec:
   gateways:
-  - odh-gateway
+  - auth-gateway
   hosts:
-  - route.io
+  - "*"
   http:
   - route:
     - destination:
         host: proxy
         port:
-          number: 8080
+          number: 80

@@ -6,6 +6,9 @@ metadata:
 spec:
   version: v2.3
   proxy:
+    accessLogging:
+      file:
+        name: /dev/stdout 
     injection:
       autoInject: true
     runtime:
@@ -32,9 +35,9 @@ spec:
   techPreview:
     meshConfig:
       extensionProviders:
-        - name: oauth2-proxy
+        - name: proxy
           envoyExtAuthzHttp:
-            service: proxy.opendatahub.svc.cluster.local
+            service: proxy.ext-auth.svc.cluster.local
             port: 80
             timeout: 1.5s
             includeHeadersInCheck: ["authorization", "cookie"]

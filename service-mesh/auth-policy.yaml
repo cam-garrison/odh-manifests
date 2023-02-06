@@ -2,14 +2,14 @@ kind: AuthorizationPolicy
 apiVersion: security.istio.io/v1beta1
 metadata:
   name: ext-authz-oauth2-proxy
-  namespace: opendatahub
+  namespace: istio-system
 spec:
   selector:
     matchLabels:
-      istio: ingressgateway
+      app: istio-ingressgateway
   action: CUSTOM
   provider:
-    name: oauth2-proxy
+    name: proxy
   rules: 
     - to:
         - operation:

@@ -33,11 +33,15 @@ spec:
         - --cookie-expire=23h0m0s
         - --cookie-secret=SECRET
         - --pass-access-token
+        - --client-id=dashboard-oauth-client
+        - --client-secret-file=/etc/oauth/client/secret
         volumeMounts:
         - mountPath: /etc/tls/private
           name: proxy-tls
         - mountPath: /etc/oauth/config
           name: oauth-config
+        - mountPath: /etc/oauth/client
+          name: oauth-client
       - name: http-https-echo
         image: docker.io/hashicorp/http-echo:alpine
         imagePullPolicy: IfNotPresent
@@ -53,4 +57,7 @@ spec:
         - name: oauth-config
           secret:
             secretName: oauth-config-generated
+        - name: oauth-client
+          secret:
+            secretName: dashboard-oauth-client-generated
       

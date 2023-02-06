@@ -8,11 +8,11 @@ spec:
     istio: ingressgateway
   servers:
   - hosts:
-    - proxy.opendatahub.svc.cluster.local
+    - "*"
     port:
-      name: https-oauth-cluster-example-com
-      number: 443
-      protocol: HTTPS
-    tls:
-      credentialName: odh-dashboard-credential # must be the same as secret
-      mode: SIMPLE
+      name: http
+      number: 80
+      protocol: HTTP
+    # tls:
+    #   credentialName: odh-dashboard-credential # must be the same as secret
+    #   mode: SIMPLE
