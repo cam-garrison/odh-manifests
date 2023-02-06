@@ -2,7 +2,7 @@ apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
   name: oauth2-proxy
-  namespace: opendatahub
+  namespace: ext-auth
 spec:
   gateways:
   - odh-gateway
