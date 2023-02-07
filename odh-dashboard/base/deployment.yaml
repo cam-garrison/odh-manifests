@@ -43,7 +43,7 @@ spec:
             port: 8080
           initialDelaySeconds: 30
           timeoutSeconds: 15
-          periodSeconds: 30
+          periodSeconds: 300
           successThreshold: 1
           failureThreshold: 3
         readinessProbe:
@@ -53,7 +53,7 @@ spec:
             scheme: HTTP
           initialDelaySeconds: 30
           timeoutSeconds: 15
-          periodSeconds: 30
+          periodSeconds: 300
           successThreshold: 1
           failureThreshold: 3
       # - name: oauth-proxy
