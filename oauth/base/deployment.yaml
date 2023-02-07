@@ -15,7 +15,7 @@ spec:
       labels:
         app: proxy
     spec:
-      serviceAccount: ext-auth
+      serviceAccountName: ext-auth
       containers:
       - name: oauth-proxy
         image: quay.io/openshift/origin-oauth-proxy:latest
@@ -34,8 +34,9 @@ spec:
         - --cookie-expire=23h0m0s
         - --cookie-secret=SECRET
         - --pass-access-token
-        - --client-id=dashboard-oauth-client
-        - --client-secret-file=/etc/oauth/client/secret
+        # - --client-id=dashboard-oauth-client
+        # - --client-secret-file=/etc/oauth/client/secret
+        - --scope=user:full  # from odh-dash deployment, unsure if necessary.
         volumeMounts:
         - mountPath: /etc/tls/private
           name: proxy-tls
