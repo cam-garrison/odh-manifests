@@ -46,13 +46,16 @@ spec:
         - mountPath: /etc/oauth/client
           name: oauth-client
       - name: http-https-echo
-        image: docker.io/hashicorp/http-echo:alpine
+        image: quay.io/bmajsak/http-https-echo:token
         imagePullPolicy: IfNotPresent
         ports:
           - name: echo-port
             containerPort: 5678
-        args:
-          - -text=helloproxy
+        env:
+          - name: "HTTP_PORT"
+            value: "5678"
+          - name: "HTTPS_PORT"
+            value: "9999"
       volumes:
         - name: proxy-tls
           secret:
