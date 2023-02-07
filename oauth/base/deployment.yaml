@@ -27,6 +27,8 @@ spec:
         - --http-address=:8180
         - --provider=openshift
         - --openshift-service-account=ext-auth
+        # - --client-id=dashboard-oauth-client  # using ^ SA as client 
+        # - --client-secret-file=/etc/oauth/client/secret
         - --upstream=http://localhost:5678
         - --tls-cert=/etc/tls/private/tls.crt
         - --tls-key=/etc/tls/private/tls.key
@@ -34,9 +36,8 @@ spec:
         - --cookie-expire=23h0m0s
         - --cookie-secret=SECRET
         - --pass-access-token
-        # - --client-id=dashboard-oauth-client
-        # - --client-secret-file=/etc/oauth/client/secret
-        - --scope=user:full  # from odh-dash deployment, unsure if necessary.
+        - --pass-user-bearer-token 
+        # - --scope=user:full  # from odh-dash deployment, unsure if necessary.
         volumeMounts:
         - mountPath: /etc/tls/private
           name: proxy-tls
