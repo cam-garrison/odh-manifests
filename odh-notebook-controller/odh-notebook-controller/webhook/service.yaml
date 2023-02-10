@@ -8,5 +8,5 @@ metadata:
 spec:
   ports:
     - name: webhook
-      port: 443
+      port: 80
       targetPort: webhook
