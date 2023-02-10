@@ -11,8 +11,8 @@ spec:
   http:
   - route:
     - destination:
-        host: webhook-service
+        host: odh-notebook-controller-webhook-service
         port:
-          number: 80
+          number: 443
 
 
