@@ -1,0 +1,15 @@
+apiVersion: networking.istio.io/v1beta1
+kind: ServiceEntry
+metadata:
+  generation: 1
+  name: auth-provider
+  namespace: auth-provider
+spec:
+  hosts:
+  - auth-service.auth-provider.svc.cluster.local
+  ports:
+  - name: http
+    number: 80
+    protocol: HTTP
+    targetPort: 8180
+  resolution: STATIC
