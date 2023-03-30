@@ -21,7 +21,7 @@ resources:
 images:
 - name: odh-dashboard
   newName: quay.io/maistra-dev/odh-dashboard
-  newTag: cam-test-log
+  newTag: cam-test-proj-link
 - name: oauth-proxy
   newName: registry.redhat.io/openshift4/ose-oauth-proxy
   newTag: v4.8
