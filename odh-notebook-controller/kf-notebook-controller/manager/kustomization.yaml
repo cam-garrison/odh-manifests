@@ -6,6 +6,7 @@ configMapGenerator:
   - name: config
     literals:
       - USE_ISTIO=true
-      - ISTIO_GATEWAY=odh-gateway
+      # TODO(ossm): use env-vars for this?
+      - ISTIO_GATEWAY=opendatahub/odh-gateway
 generatorOptions:
   disableNameSuffixHash: true
