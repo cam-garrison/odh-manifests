@@ -12,6 +12,7 @@ spec:
     disableInfo: false
     disableSupport: false
     disableTracking: true
+    disableServiceMesh: true
     enablement: true
   notebookController:
     enabled: true
