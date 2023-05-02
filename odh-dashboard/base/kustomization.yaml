@@ -24,6 +24,6 @@ resources:
 - model-serving-role-binding.yaml
 images:
 - name: odh-dashboard
-  newName: quay.io/aslakknutsen/odh-dashboard
-  newTag: latest
+  newName: quay.io/maistra-dev/odh-dashboard
+  newTag: route-for-old-nbs
 
