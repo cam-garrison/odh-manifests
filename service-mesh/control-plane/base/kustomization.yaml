@@ -22,6 +22,7 @@ configMapGenerator:
       - resource-templates/patch-dashboard-config.yaml
       - auth-policy.yaml
       - filter-propagate-token.yaml
+      - deny-all-policy.yaml
 
 generatorOptions:
   disableNameSuffixHash: true
