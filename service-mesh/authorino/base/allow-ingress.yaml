@@ -1,0 +1,12 @@
+# alllow traffic from istio-system to opendatahub
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: allow-ingress
+  namespace: auth-provider
+spec:
+  action: ALLOW
+  rules:
+  - from:
+    - source:
+        namespaces: ["istio-system", "opendatahub"]
