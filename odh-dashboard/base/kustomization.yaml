@@ -25,4 +25,4 @@ resources:
 images:
 - name: odh-dashboard
   newName: quay.io/maistra-dev/odh-dashboard
-  newTag: route-for-old-nbs
+  newTag: test-label-propagation
