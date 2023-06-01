@@ -6,9 +6,9 @@ resources:
 - job-role.yaml
 - job-role-binding.yaml
 
-patchesStrategicMerge:
-- patches/oauth-client-patch.yaml
-- patches/oauth-config-patch.yaml
+# patchesStrategicMerge:
+# - patches/oauth-client-patch.yaml
+# - patches/oauth-config-patch.yaml
 
 patches:
 - path: patches/route-patch.yaml
