@@ -2,5 +2,5 @@ $patch: delete
 apiVersion: v1
 kind: Secret
 metadata:
-  name: dashboard-oauth-config
+  name: dashboard-oauth-config-generated
   namespace: opendatahub  # TODO:HARDCODED
