@@ -5,6 +5,7 @@ resources:
 - virtual-service.yaml
 - job-role.yaml
 - job-role-binding.yaml
+- ../../base
 
 # patchesStrategicMerge:
 # - patches/oauth-client-patch.yaml
