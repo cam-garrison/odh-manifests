@@ -27,7 +27,7 @@ images:
 - name: odh-dashboard
   ## FIXME: Temporary until odh-dashboard PR is merged upstream
   newName: quay.io/maistra-dev/odh-dashboard
-  newTag: change_annotations_e875685
+  newTag: update-oauth-anno-fce222c
 - name: oauth-proxy
   newName: registry.redhat.io/openshift4/ose-oauth-proxy
   newTag: v4.8
