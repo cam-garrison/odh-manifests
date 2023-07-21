@@ -35,9 +35,4 @@ patchesJson6902:
     version: v1
     kind: ServiceAccount
     name: odh-dashboard
-- path: patches/deployment-patch.yaml
-  target:
-    group: apps
-    version: v1
-    kind: Deployment
-    name: odh-dashboard
+
