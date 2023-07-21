@@ -2,9 +2,9 @@
 - op: remove
   path: /spec/template/spec/containers/1
 
-# remove the volumes, no longer needed and secrets that are mounted are no longer created.
-- op: remove
-  path: /spec/template/spec/volumes
+# # remove the volumes, no longer needed and secrets that are mounted are no longer created.
+# - op: remove
+#   path: /spec/template/spec/volumes
 
 # # add istio inject label
 # - op: add
