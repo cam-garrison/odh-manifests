@@ -19,6 +19,12 @@ patchesStrategicMerge:
 # # also: inline patches do not work, operator complains about overlays/service-mesh being 
 # # a directory and not a kustomization.yaml file 
 patchesJson6902:
+- path: patches/deployment-patch.yaml
+  target:
+    group: apps
+    version: v1
+    kind: Deployment
+    name: odh-dashboard
 - path: patches/route-patch.yaml
   target:
     group: route.openshift.io
